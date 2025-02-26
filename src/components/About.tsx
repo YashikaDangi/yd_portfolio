@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState, useEffect, JSX } from "react";
-import { Code, Laptop, Server, Boxes } from "lucide-react";
+import { Code, Laptop, Server } from "lucide-react";
 import Image from "next/image";
 
 interface SkillCategory {
@@ -30,7 +30,7 @@ export const About = () => {
       title: "Backend",
       skills: ["Node.js", "MongoDB", "REST APIs"],
       color: "from-green-400 to-green-600",
-    },
+    }
     // {
     //   icon: <Boxes className="w-6 h-6" />,
     //   title: "Blockchain",
@@ -83,9 +83,9 @@ export const About = () => {
               </div>
 
               <p className="text-gray-300 text-lg leading-relaxed">
-                👋 Hey there! I'm a Full Stack Developer with expertise in
+                👋 Hey there! I&apos;m a Full Stack Developer with expertise in
                 blockchain and web development. 🚀 Having worked with clients
-                globally through freelancing and remote positions, I've
+                globally through freelancing and remote positions, I&apos;ve
                 developed strong skills in delivering high-quality solutions
                 independently.
               </p>

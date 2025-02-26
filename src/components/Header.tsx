@@ -1,6 +1,6 @@
 "use client";
-import React, { useState, useEffect, createContext, useContext } from "react";
-import { Menu, X, Moon, Sun, Github, Linkedin } from "lucide-react";
+import React, { useState, useEffect, createContext } from "react";
+import { Menu, X, Github, Linkedin } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
 // Create Theme Context
@@ -36,7 +36,8 @@ export const ThemeProvider = ({ children }: { children: React.ReactNode }) => {
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
-  const { theme, toggleTheme } = useContext(ThemeContext);
+  // Removed the unused variables from useContext
+  // const { theme, toggleTheme } = useContext(ThemeContext);
 
   const navItems = [
     { name: "About", href: "#about" },
