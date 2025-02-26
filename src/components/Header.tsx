@@ -146,7 +146,7 @@ const Header = () => {
                 <Linkedin className="w-5 h-5 text-gray-600 dark:text-gray-300 hover:text-blue-500 dark:hover:text-blue-400" />
               </motion.a>
             </div>
-            <motion.button
+            {/* <motion.button
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.95 }}
               onClick={toggleTheme}
@@ -175,7 +175,7 @@ const Header = () => {
                   </motion.div>
                 )}
               </AnimatePresence>
-            </motion.button>
+            </motion.button> */}
           </div>
 
           {/* Mobile Menu Button */}
@@ -218,7 +218,7 @@ const Header = () => {
               exit={{ height: 0, opacity: 0 }}
               className="md:hidden overflow-hidden"
             >
-              <nav className="flex flex-col space-y-4 py-4">
+              <nav className="flex flex-col space-y-4 py-4 bg-gray-600">
                 {navItems.map((item) => (
                   <motion.button
                     key={item.name}
@@ -231,7 +231,7 @@ const Header = () => {
                     {item.name}
                   </motion.button>
                 ))}
-                <div className="flex items-center justify-center space-x-4 pt-4 border-t border-gray-200 dark:border-gray-700">
+                {/* <div className="flex items-center justify-center space-x-4 pt-4 border-t border-gray-200 dark:border-gray-700">
                   <motion.button
                     whileHover={{ scale: 1.1 }}
                     whileTap={{ scale: 0.95 }}
@@ -244,7 +244,7 @@ const Header = () => {
                       <Moon className="w-5 h-5 text-gray-600" />
                     )}
                   </motion.button>
-                </div>
+                </div> */}
               </nav>
             </motion.div>
           )}

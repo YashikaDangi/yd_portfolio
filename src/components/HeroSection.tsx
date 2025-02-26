@@ -1,24 +1,30 @@
-'use client'
-import React, { useEffect, useState } from 'react';
-import { motion } from 'framer-motion';
-import { ArrowRight, Github, Linkedin, ChevronDown } from 'lucide-react';
+"use client";
+import React, { useEffect, useState } from "react";
+import { motion } from "framer-motion";
+import { ArrowRight, Github, Linkedin, ChevronDown } from "lucide-react";
 
 const HeroSection = () => {
-  const [floatingElements, setFloatingElements] = useState<Array<{ x: number; y: number }>>([]);
+  const [floatingElements, setFloatingElements] = useState<
+    Array<{ x: number; y: number }>
+  >([]);
 
   useEffect(() => {
     // Initialize floating elements positions once we&apos;re on the client side
     const elements = [...Array(5)].map(() => ({
-      x: Math.random() * (typeof window !== 'undefined' ? window.innerWidth : 1000),
-      y: Math.random() * (typeof window !== 'undefined' ? window.innerHeight : 1000),
+      x:
+        Math.random() *
+        (typeof window !== "undefined" ? window.innerWidth : 1000),
+      y:
+        Math.random() *
+        (typeof window !== "undefined" ? window.innerHeight : 1000),
     }));
     setFloatingElements(elements);
   }, []);
 
   const scrollToProjects = () => {
-    const projectsSection = document.getElementById('projects');
+    const projectsSection = document.getElementById("projects");
     if (projectsSection) {
-      projectsSection.scrollIntoView({ behavior: 'smooth' });
+      projectsSection.scrollIntoView({ behavior: "smooth" });
     }
   };
 
@@ -50,7 +56,6 @@ const HeroSection = () => {
           />
         ))}
       </div>
-
       <div className="container mx-auto px-4 relative">
         <div className="flex flex-col items-center justify-center min-h-screen text-center">
           {/* Main Content */}
@@ -91,8 +96,8 @@ const HeroSection = () => {
               transition={{ delay: 0.7 }}
               className="text-gray-400 text-lg md:text-xl mb-8 max-w-2xl mx-auto"
             >
-              I craft beautiful, performant web applications with modern technologies.
-              Let&apos;s build something amazing together.
+              I craft beautiful, performant web applications with modern
+              technologies. Let&apos;s build something amazing together.
             </motion.p>
 
             {/* CTA Buttons */}

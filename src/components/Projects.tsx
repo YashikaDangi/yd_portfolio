@@ -2,7 +2,7 @@
 
 import React, { useState } from "react";
 import { motion, useInView, AnimatePresence } from "framer-motion";
-import { ExternalLink, Github, ChevronLeft, ChevronRight } from "lucide-react";
+import { ExternalLink, ChevronLeft, ChevronRight } from "lucide-react";
 import Image from "next/image";
 
 interface Project {
@@ -10,6 +10,7 @@ interface Project {
   description: string;
   image: string;
   tags: string[];
+  demoLink?: string;
 }
 
 interface ProjectCardProps {
@@ -21,89 +22,77 @@ const Projects = () => {
   const projectsPerPage = 6;
 
   const projects = [
+    // {
+    //   title: "Ordinalnovus",
+    //   description: "A BTC based ordinals marketplace with multiple features.",
+    //   image: "/images/shogun-warrior.png",
+    //   tags: ["NextJS", "TailwindCSS", "Redux", "Kubernetes", "Docker"],
+    //   demoLink: "https://ordinalnovus.com/",
+    // },
     {
-      title: "Project 1",
-      description: "A full-stack web application built with React and Node.js",
+      title: "Shogun-Warrior",
+      description: "A frontend web application built with ReactJS (Staging version)",
       image: "/images/shogun-warrior.png",
-      tags: ["React", "Node.js", "MongoDB"],
+      tags: ["ReactJS", "CSS"],
+      demoLink: "https://shogun-warrior.vercel.app/",
     },
     {
-      title: "Project 2",
-      description: "Mobile-first e-commerce platform",
+      title: "Ordsats",
+      description: "A Web application built with ReactJS for an ordinals community.",
       image: "/images/ordsats.png",
-      tags: ["React Native", "Firebase", "Stripe"],
+      tags: ["NextJS", "Sendgrid", "MongoDB", "TailwindCSS"],
+      demoLink: "https://www.ordsats.xyz/",
     },
     {
-      title: "Project 3",
-      description: "AI-powered data visualization dashboard",
+      title: "Cynova",
+      description: "Solana based E-commerce Platform enabling purchase using Solana based tokens (Staging)",
       image: "/images/cynova.png",
-      tags: ["Python", "TensorFlow", "D3.js"],
+      tags: ["NextJS", "Redux", "MongoDB", "TailwindCSS", "Sendgrid"],
+      demoLink: "https://cynova-store.vercel.app/",
     },
     {
-      title: "Project 4",
-      description: "A full-stack web application built with React and Node.js",
-      image: "/images/aio-launchpad.png",
-      tags: ["React", "Node.js", "MongoDB"],
-    },
-    {
-      title: "Project 5",
+      title: "Campaignkart",
       description: "Mobile-first e-commerce platform",
       image: "/images/campaignkart.png",
-      tags: ["React Native", "Firebase", "Stripe"],
+      tags: ["MongoDB", "NextJS", "Redux", "TailwindCSS"],
+      demoLink: "https://campaignkart.vercel.app/",
     },
     {
-      title: "Project 6",
-      description: "AI-powered data visualization dashboard",
+      title: "Komradz",
+      description: "Solana NFT Community Landing Page with Candymachine Integration",
       image: "/images/komradz-lilac.png",
-      tags: ["Python", "TensorFlow", "D3.js"],
+      tags: ["NextJS", "TailwindCSS", "Solana"],
+      demoLink: "https://komradz-lilac.vercel.app/",
     },
     {
-      title: "Project 7",
-      description: "A full-stack web application built with React and Node.js",
-      image: "/images/ordscribe.png",
-      tags: ["React", "Node.js", "MongoDB"],
-    },
-    {
-      title: "Project 8",
-      description: "Mobile-first e-commerce platform",
+      title: "Soltoons",
+      description: "Solana based betting platform with interactive UI and Blockchain based smart contract.",
       image: "/images/soltoons.png",
-      tags: ["React Native", "Firebase", "Stripe"],
+      tags: ["ReactJS", "Firebase", "Rive", "TailwindCSS"],
+      demoLink: "https://soltoons.vercel.app/",
     },
     {
-      title: "Project 9",
-      description: "AI-powered data visualization dashboard",
+      title: "Stephanv-mint",
+      description: "Solana NFT Community Landing Page with Candymachine Integration and a unique user experience",
       image: "/images/stephanv-mint.png",
       tags: ["Python", "TensorFlow", "D3.js"],
+      demoLink: "https://stephanv-mint.vercel.app/",
     },
     {
-      title: "Project 10",
-      description: "A full-stack web application built with React and Node.js",
+      title: "Twelvefrog",
+      description: "An Ordinal based P2P marketplace built with ReactJS and based on windows98 theme with open ledger",
       image: "/images/twelvefrog.png",
-      tags: ["React", "Node.js", "MongoDB"],
+      tags: ["ReactJS", "CSS", "Nostr"],
+      demoLink: "https://www.twelvefrog.com/",
     },
     {
-      title: "Project 11",
-      description: "Mobile-first e-commerce platform",
+      title: "Swift",
+      description: "Landing Page + Admin Panel for student assignment management",
       image: "/images/swift.png",
-      tags: ["React Native", "Firebase", "Stripe"],
+      tags: ["NextJS", "Next-Auth", "Stripe", "Redux"],
+      demoLink: "https://swiftstudy.vercel.app/",
     },
   ];
-
-  const paginatedProjects = projects.slice(
-    currentPage * projectsPerPage,
-    (currentPage + 1) * projectsPerPage
-  );
-
-  const container = {
-    hidden: { opacity: 0 },
-    show: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.2,
-        delayChildren: 0.3,
-      },
-    },
-  };
 
   const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
     const cardRef = React.useRef(null);
@@ -141,7 +130,6 @@ const Projects = () => {
         className="group"
       >
         <div className="relative overflow-hidden rounded-2xl bg-gray-800/50 backdrop-blur-sm border border-gray-700/50 shadow-xl">
-          {/* Image Container */}
           <motion.div
             className="relative overflow-hidden h-48"
             whileHover={{ scale: 1.05 }}
@@ -155,30 +143,25 @@ const Projects = () => {
               className="w-full h-full object-cover"
               priority
             />
-            {/* Overlay */}
-            <motion.div
-              className="absolute inset-0 bg-black/60 flex items-center justify-center gap-4"
-              initial={{ opacity: 0 }}
-              whileHover={{ opacity: 1 }}
-              transition={{ duration: 0.2 }}
-            >
-              <motion.a
-                href="#"
-                className="p-3 bg-blue-500 rounded-full text-white hover:bg-blue-400 transition-colors"
-                whileHover={{ scale: 1.1 }}
-                whileTap={{ scale: 0.95 }}
+            {project.demoLink && (
+              <motion.div
+                className="absolute inset-0 bg-black/60 flex items-center justify-center"
+                initial={{ opacity: 0 }}
+                whileHover={{ opacity: 1 }}
+                transition={{ duration: 0.2 }}
               >
-                <Github className="w-5 h-5" />
-              </motion.a>
-              <motion.a
-                href="#"
-                className="p-3 bg-blue-500 rounded-full text-white hover:bg-blue-400 transition-colors"
-                whileHover={{ scale: 1.1 }}
-                whileTap={{ scale: 0.95 }}
-              >
-                <ExternalLink className="w-5 h-5" />
-              </motion.a>
-            </motion.div>
+                <motion.a
+                  href={project.demoLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="p-3 bg-blue-500 rounded-full text-white hover:bg-blue-400 transition-colors"
+                  whileHover={{ scale: 1.1 }}
+                  whileTap={{ scale: 0.95 }}
+                >
+                  <ExternalLink className="w-5 h-5" />
+                </motion.a>
+              </motion.div>
+            )}
           </motion.div>
 
           <div className="p-6">
@@ -206,6 +189,22 @@ const Projects = () => {
         </div>
       </motion.div>
     );
+  };
+
+  const paginatedProjects = projects.slice(
+    currentPage * projectsPerPage,
+    (currentPage + 1) * projectsPerPage
+  );
+
+  const container = {
+    hidden: { opacity: 0 },
+    show: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.2,
+        delayChildren: 0.3,
+      },
+    },
   };
 
   const headerRef = React.useRef(null);
@@ -265,7 +264,6 @@ const Projects = () => {
           />
         </motion.div>
 
-        {/* Projects Grid */}
         <AnimatePresence mode="wait">
           <motion.div
             key={currentPage}
@@ -280,7 +278,6 @@ const Projects = () => {
           </motion.div>
         </AnimatePresence>
 
-        {/* Pagination */}
         <div className="flex justify-center items-center space-x-4 mt-12">
           <motion.button
             whileHover={{ scale: 1.1 }}

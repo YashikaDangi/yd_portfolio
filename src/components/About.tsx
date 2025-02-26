@@ -1,6 +1,7 @@
 "use client";
+
 import React, { useState, useEffect, JSX } from "react";
-import { Code, Laptop, Server } from "lucide-react";
+import { Code, Laptop, Server, Boxes } from "lucide-react";
 import Image from "next/image";
 
 interface SkillCategory {
@@ -21,15 +22,21 @@ export const About = () => {
     {
       icon: <Laptop className="w-6 h-6" />,
       title: "Frontend",
-      skills: ["React", "Next.js", "Tailwind CSS", "TypeScript"],
+      skills: ["React", "Next.js", "TailwindCSS", "TypeScript"],
       color: "from-blue-400 to-blue-600",
     },
     {
       icon: <Server className="w-6 h-6" />,
       title: "Backend",
-      skills: ["Node.js", "Express", "MongoDB", "REST APIs"],
+      skills: ["Node.js", "MongoDB", "REST APIs"],
       color: "from-green-400 to-green-600",
     },
+    // {
+    //   icon: <Boxes className="w-6 h-6" />,
+    //   title: "Blockchain",
+    //   skills: ["Web3.js", "Ordinals", "Smart Contracts", "DApps"],
+    //   color: "from-yellow-400 to-orange-600",
+    // },
   ];
 
   return (
@@ -72,21 +79,23 @@ export const About = () => {
             <div className="space-y-6">
               <div className="inline-flex items-center space-x-2 px-4 py-2 rounded-full bg-gradient-to-r from-blue-500/10 to-green-500/10 border border-blue-500/20">
                 <Code className="w-5 h-5 text-blue-400" />
-                <span className="text-blue-400">Software Developer</span>
+                <span className="text-blue-400">Full Stack Developer</span>
               </div>
 
               <p className="text-gray-300 text-lg leading-relaxed">
-                I&apos;m a passionate software developer with expertise in
-                full-stack development. I specialize in building modern web
-                applications using React and Node.js. A fast learner and
-                problem-solver, I thrive on collaborating with clients to design
-                and deliver efficient, scalable solutions.
+                👋 Hey there! I'm a Full Stack Developer with expertise in
+                blockchain and web development. 🚀 Having worked with clients
+                globally through freelancing and remote positions, I've
+                developed strong skills in delivering high-quality solutions
+                independently.
               </p>
 
               <p className="text-gray-300 text-lg leading-relaxed">
-                My focus is on creating user-friendly applications that solve
-                real-world challenges while maintaining high standards of code
-                quality and performance.
+                💻 My experience spans from Ordinalnovus project to various
+                blockchain initiatives, demonstrating my ability to adapt and
+                excel in remote environments. 📚 Passionate about staying
+                current with tech trends and bringing innovative solutions to
+                every project! ✨
               </p>
             </div>
           </div>
