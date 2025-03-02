@@ -22,13 +22,13 @@ const Projects = () => {
   const projectsPerPage = 6;
 
   const projects = [
-    // {
-    //   title: "Ordinalnovus",
-    //   description: "A BTC based ordinals marketplace with multiple features.",
-    //   image: "/images/shogun-warrior.png",
-    //   tags: ["NextJS", "TailwindCSS", "Redux", "Kubernetes", "Docker"],
-    //   demoLink: "https://ordinalnovus.com/",
-    // },
+    {
+      title: "Ordinalnovus",
+      description: "A BTC based ordinals marketplace with multiple features.",
+      image: "/images/ordinalnovous.png",
+      tags: ["NextJS", "TailwindCSS", "Redux", "Kubernetes", "Docker"],
+      demoLink: "https://ordinalnovus.com/",
+    },
     {
       title: "Shogun-Warrior",
       description: "A frontend web application built with ReactJS (Staging version)",
