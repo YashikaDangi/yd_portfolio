@@ -26,7 +26,7 @@ const Projects = () => {
       title: "Ordinsta",
       description: "A social media-like platform for Bitcoin Ordinals where users can like, comment, and save inscriptions.",
       image: "/images/ordinsta.png",
-      tags: ["NextJS", "TailwindCSS", "Redux", "Kubernetes", "Docker"],
+      tags: ["NextJS", "TailwindCSS", "Mongodb"],
       demoLink: "https://ordinals-cxfi-6q8ur2p92-yashika-dangis-projects.vercel.app/",
     },
     {
