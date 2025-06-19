@@ -30,7 +30,7 @@ export const About = () => {
       title: "Backend",
       skills: ["Node.js", "MongoDB", "REST APIs"],
       color: "from-green-400 to-green-600",
-    }
+    },
     // {
     //   icon: <Boxes className="w-6 h-6" />,
     //   title: "Blockchain",
@@ -83,19 +83,19 @@ export const About = () => {
               </div>
 
               <p className="text-gray-300 text-lg leading-relaxed">
-                👋 Hey there! I&apos;m a Full Stack Developer with expertise in
-                blockchain and web development. 🚀 Having worked with clients
-                globally through freelancing and remote positions, I&apos;ve
-                developed strong skills in delivering high-quality solutions
-                independently.
+                👋 Hey there! I&apos;m a Full Stack Developer passionate about
+                building scalable and user-friendly web applications. From
+                e-commerce platforms like YLF to creative tools like BittyAI
+                Studio, I enjoy crafting seamless digital experiences using
+                technologies like Next.js, React, and MongoDB.
               </p>
 
               <p className="text-gray-300 text-lg leading-relaxed">
-                💻 My experience spans from Ordinalnovus project to various
-                blockchain initiatives, demonstrating my ability to adapt and
-                excel in remote environments. 📚 Passionate about staying
-                current with tech trends and bringing innovative solutions to
-                every project! ✨
+                💻 At Coderixx, I’ve contributed to projects like Ordinalnovus,
+                combining full-stack development with blockchain integration.
+                Whether it’s integrating secure payments, building responsive
+                UIs, or leveraging AI tools, I strive to deliver clean,
+                efficient, and impactful solutions. ✨
               </p>
             </div>
           </div>

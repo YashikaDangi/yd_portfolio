@@ -23,6 +23,20 @@ const Projects = () => {
 
   const projects = [
     {
+      title: "YLF",
+      description: "A full-stack mushroom e-commerce platform with cross-device cart sync, and secure PayU integration.",
+      image: "/images/YLF.png",
+      tags: ["Next.js", "TypeScript", "Tailwind CSS","MongoDB", "NextAuth.js"," PayU"],
+      demoLink: "https://ordinals-cxfi-6q8ur2p92-yashika-dangis-projects.vercel.app/",
+    },
+    {
+      title: "BittyAI Studio",
+      description: "A social media-like platform for Bitcoin Ordinals where users can like, comment, and save inscriptions.",
+      image: "/images/BittyStudio.png",
+      tags: ["Next.js", "TypeScript", "Tailwind CSS", "MongoDB", "OpenAI DALL-E", "Stripe", "Firebase"],
+      demoLink: "https://studio.bittyai.com/",
+    },
+    {
       title: "Ordinsta",
       description: "A social media-like platform for Bitcoin Ordinals where users can like, comment, and save inscriptions.",
       image: "/images/ordinsta.png",
@@ -64,13 +78,13 @@ const Projects = () => {
       tags: ["MongoDB", "NextJS", "Redux", "TailwindCSS"],
       demoLink: "https://campaignkart.vercel.app/",
     },
-    {
-      title: "Komradz",
-      description: "Solana NFT Community Landing Page with Candymachine Integration",
-      image: "/images/komradz-lilac.png",
-      tags: ["NextJS", "TailwindCSS", "Solana"],
-      demoLink: "https://komradz-lilac.vercel.app/",
-    },
+    // {
+    //   title: "Komradz",
+    //   description: "Solana NFT Community Landing Page with Candymachine Integration",
+    //   image: "/images/komradz-lilac.png",
+    //   tags: ["NextJS", "TailwindCSS", "Solana"],
+    //   demoLink: "https://komradz-lilac.vercel.app/",
+    // },
     {
       title: "Soltoons",
       description: "Solana based betting platform with interactive UI and Blockchain based smart contract.",
@@ -85,13 +99,13 @@ const Projects = () => {
       tags: ["Python", "TensorFlow", "D3.js"],
       demoLink: "https://stephanv-mint.vercel.app/",
     },
-    {
-      title: "Twelvefrog",
-      description: "An Ordinal based P2P marketplace built with ReactJS and based on windows98 theme with open ledger",
-      image: "/images/twelvefrog.png",
-      tags: ["ReactJS", "CSS", "Nostr"],
-      demoLink: "https://www.twelvefrog.com/",
-    },
+    // {
+    //   title: "Twelvefrog",
+    //   description: "An Ordinal based P2P marketplace built with ReactJS and based on windows98 theme with open ledger",
+    //   image: "/images/twelvefrog.png",
+    //   tags: ["ReactJS", "CSS", "Nostr"],
+    //   demoLink: "https://www.twelvefrog.com/",
+    // },
     {
       title: "Swift",
       description: "Landing Page + Admin Panel for student assignment management",

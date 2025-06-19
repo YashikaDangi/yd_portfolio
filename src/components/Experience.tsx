@@ -15,7 +15,7 @@ export const ExperienceSection: React.FC = () => {
     {
       company: "Coderixx",
       role: "Full Stack Developer",
-      period: "Oct 2023 - Present",
+      period: "Nov 2023 - Present",
       description:
         "Worked on Ordinalnovus Project, developing and maintaining full-stack blockchain applications",
       technologies: ["ReactJS", "NextJS", "TailwindCSS", "Blockchain"],
@@ -25,19 +25,6 @@ export const ExperienceSection: React.FC = () => {
         "Developed responsive and performant user interfaces",
       ],
     },
-    // {
-    //   company: "Freelance",
-    //   role: "Frontend Developer",
-    //   period: "June 2023 - April 2024",
-    //   description:
-    //     "Collaborated with various blockchain-based clients to deliver high-quality frontend solutions",
-    //   technologies: ["ReactJS", "NextJS", "TailwindCSS", "Web3"],
-    //   achievements: [
-    //     "Successfully delivered multiple blockchain-based projects",
-    //     "Maintained strong client relationships and communication",
-    //     "Implemented modern frontend architectures and best practices",
-    //   ],
-    // },
     {
       company: "Graphic Era University",
       role: "B.Tech Computer Science",
