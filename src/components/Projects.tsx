@@ -22,13 +22,13 @@ const Projects = () => {
   const projectsPerPage = 6;
 
   const projects = [
-    {
-      title: "YLF",
-      description: "A full-stack mushroom e-commerce platform with cross-device cart sync, and secure PayU integration.",
-      image: "/images/YLF.png",
-      tags: ["Next.js", "TypeScript", "Tailwind CSS","MongoDB", "NextAuth.js"," PayU"],
-      demoLink: "https://ordinals-cxfi-6q8ur2p92-yashika-dangis-projects.vercel.app/",
-    },
+    // {
+    //   title: "YLF",
+    //   description: "A full-stack mushroom e-commerce platform with cross-device cart sync, and secure PayU integration.",
+    //   image: "/images/YLF.png",
+    //   tags: ["Next.js", "TypeScript", "Tailwind CSS","MongoDB", "NextAuth.js"," PayU"],
+    //   demoLink: "https://ordinals-cxfi-6q8ur2p92-yashika-dangis-projects.vercel.app/",
+    // },
     {
       title: "BittyAI Studio",
       description: "A social media-like platform for Bitcoin Ordinals where users can like, comment, and save inscriptions.",
